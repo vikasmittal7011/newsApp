@@ -3,11 +3,12 @@ import NavBar from "./components/NavBar";
 import News from "./components/News";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
+import api from "./components/keys/api";
 
 const App = () => {
   const [loading, setLoading] = useState(0);
 
-  const apiKey = process.env.REACT_APP_NEWS_APP_API_KEY;
+  const apiKey = api() || process.env.REACT_APP_API;
 
   const pageSize = 9;
 
