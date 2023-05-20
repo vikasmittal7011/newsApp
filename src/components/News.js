@@ -49,6 +49,10 @@ const News = (props) => {
     // document.title = "News Zilla - " + cpitalTitle(props.category);
   };
 
+  if (!articles) {
+    return <Loading />;
+  }
+
   return (
     <>
       <h1 className="text-center my-3">
